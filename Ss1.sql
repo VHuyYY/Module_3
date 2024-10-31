@@ -1,21 +1,22 @@
 create database Ss1;
 use ss1;
-create table class(
-id int,
-name varchar(50),
-primary key(id)
+
+-- Bảng Class có các trường lần lượt là id, name
+CREATE TABLE class (
+    id INT,
+    name VARCHAR(50),
+    PRIMARY KEY (id)
+);
+-- Bảng Teacher có các trường lần lượt là id, name, age, country
+CREATE TABLE teacher (
+    id INT,
+    name VARCHAR(50),
+    age INT,
+    country VARCHAR(50),
+    PRIMARY KEY (id)
 );
 
-create table teacher(
-id int,
-name varchar(50),
-age int,
-country varchar(50),
-primary key (id)
-);
-
-select *
-from class
-
-select *
-from teacher
+SELECT 
+    *
+FROM
+    class
