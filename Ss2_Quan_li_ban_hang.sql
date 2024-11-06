@@ -33,3 +33,10 @@ CREATE TABLE orderDetail (
         REFERENCES product (pID)
 );
 
+
+INSERT INTO customer (cID, cName, cAge) VALUES
+    (1, 'Minh Quan', 10),
+    (2, 'Ngoc Oanh', 20),
+    (3, 'Hong Ha', 50);
+
+
