@@ -1,5 +1,5 @@
-create database Ss3_Quan_li_sinh_vien;
-use Ss3_Quan_li_sinh_vien;
+create database Ss4_Quan_li_sinh_vien;
+use Ss4_Quan_li_sinh_vien;
 
 
 CREATE TABLE class (
@@ -66,29 +66,9 @@ VALUES
     (3, 2, 92.0),   
     (4, 3, 70.0);   
 
--- Hiển thị tất cả các sinh viên có tên bắt đầu bảng ký tự ‘h’
-SELECT * 
-FROM student 
-WHERE StudentName LIKE 'H%'; 	
-
--- Hiển thị các thông tin lớp học có thời gian bắt đầu vào tháng 12.
-SELECT * 
-FROM class 
-WHERE MONTH(StartDate) = 12;
-
--- Hiển thị tất cả các thông tin môn học có credit trong khoảng từ 3-5.
-SELECT * 
-FROM Subjects 
-WHERE Creadit BETWEEN 3 AND 5;
-
--- Thay đổi mã lớp(ClassID) của sinh viên có tên ‘Hung’ là 2.
-UPDATE student 
-SET ClassID = 2 
-WHERE StudentName = 'Hung Nguyen';
-
--- Hiển thị các thông tin: StudentName, SubName, Mark. Dữ liệu sắp xếp theo điểm thi (mark) giảm dần. nếu trùng sắp theo tên tăng dần
-SELECT s.StudentName, subj.SubName, m.Mark
-FROM Mark m
-JOIN student s ON m.StudentID = s.StudentID
-JOIN Subjects subj ON m.SubID = subj.SubID
-ORDER BY m.Mark DESC, s.StudentName ASC;
+-- Hiển thị tất cả các thông tin môn học (bảng subject) có credit lớn nhất.
+select *
+from Subjects 
+where Creadit = (select(MAX(Creadit) from Subjects);
+-- Hiển thị các thông tin môn học có điểm thi lớn nhất.
+-- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần

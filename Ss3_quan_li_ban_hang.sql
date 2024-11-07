@@ -80,7 +80,7 @@ SELECT o.oID, o.oDate,
 FROM orders o
 JOIN orderDetail od ON o.oID = od.oID
 JOIN product p ON od.pID = p.pID
-GROUP BY o.oID, o.oDate;
+GROUP BY o.oID, o.oDate;	
 
 
 
