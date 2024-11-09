@@ -69,6 +69,15 @@ VALUES
 -- Hiển thị tất cả các thông tin môn học (bảng subject) có credit lớn nhất.
 select *
 from Subjects 
-where Creadit = (select(MAX(Creadit) from Subjects);
--- Hiển thị các thông tin môn học có điểm thi lớn nhất.
+where Creadit = (select MAX(Creadit) from Subjects);
+-- Hiển thị các thông tin môn học có điểm thi lớn nhất
+select s.*,m.Mark
+from Subjects s 
+join Mark m  on s.SubID = m.SubID where m.Mark = (select MAX(Mark) from Mark);
+
 -- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
+select s.*, avg (m.Mark) as diem_trung_binh
+from student s
+join Mark m on s.StudentID = m.StudentID 
+group by s.StudentID 
+order by diem_trung_binh desc;
