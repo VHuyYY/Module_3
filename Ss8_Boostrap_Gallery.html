@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Ss8_Gallery</title>
+    <style>
+        *{
+            margin: 0;
+            border: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        div.card:hover{
+            border: 1px solid #777;
+        }
+        div .card img{
+            width: 100%;
+            height: auto;
+        }
+        div .card-text{
+            padding: 15px;
+            text-align: center;
+        }
+        p{
+            padding: 15px;
+
+        }
+    </style>
+</head>
+<body>
+<h2>Responsive Image Gallery</h2>
+<h4> Resize the browser window to see the effect.</h4>
+<div class="container">
+    <div class="row">
+        <!-- Hình 1 -->
+        <div class="col-md-3  ">
+            <div class="card ">
+                <img src="https://demo.codegym.vn/web/15/gallery/img_forest.jpg" class="card-img-top" alt="Forest">
+                <div class="card-body">
+                    <p class="card-text">Add a description of the image here</p>
+                </div>
+            </div>
+        </div>
+        <!-- Hình 2 -->
+        <div class="col-md-3">
+            <div class="card" >
+                <img src="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg" class="card-img-top" alt="Fjords">
+                <div class="card-body">
+                    <p class="card-text">Add a description of the image here</p>
+                </div>
+            </div>
+        </div>
+        <!-- Hình 3 -->
+        <div class="col-md-3">
+            <div class="card" >
+                <img src="https://demo.codegym.vn/web/15/gallery/img_lights.jpg" class="card-img-top" alt="Lights">
+                <div class="card-body">
+                    <p class="card-text">Add a description of the image here</p>
+                </div>
+            </div>
+        </div>
+        <!-- Hình 4 -->
+        <div class="col-md-3 ">
+            <div class="card"  >
+                <img src="https://demo.codegym.vn/web/15/gallery/img_mountains.jpg" class="card-img-top" alt="Mountains" >
+                <div class="card-body">
+                    <p class="card-text">Add a description of the image here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px
+    wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side.
+    For screens smaller than 500px, the images will stack vertically (100%).</p>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
