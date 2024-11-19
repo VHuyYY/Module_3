@@ -2,7 +2,7 @@
     margin: 0;
     border: 0;
     padding: 0;
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
 }
 
 .header {
@@ -156,14 +156,12 @@
 }
 
 .content-left {
-    /*display: flex;*/
     height: auto;
     width: 30%;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
-.content{
-    /*flex-basis: 30%;*/
+.content {
     width: 100%;
     height: auto;
     display: flex;
@@ -172,5 +170,8 @@
 .right-content {
     height: auto;
     width: 70%;
+    margin-bottom: 100px;
+    /*border: 1px solid black;*/
+
 }
 
